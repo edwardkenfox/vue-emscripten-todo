@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build:app": "webpack --config ./config/webpack.config.js",
+    "build:app:watch": "webpack --config ./config/webpack.config.js --watch",
     "build:domain": "./build.sh"
   },
   "dependencies": {
