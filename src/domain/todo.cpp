@@ -4,15 +4,15 @@
 
 class Todo {
     public:
-        Todo(const std::string & task)
-            : task_(task), isDone_(false)
+        Todo(const std::string & title)
+            : title_(title), isDone_(false)
         {}
-        Todo(std::string && task)
-            : task_(std::forward<std::string>(task)), isDone_(false)
+        Todo(std::string && title)
+            : title_(std::forward<std::string>(title)), isDone_(false)
         {}
 
-        const std::string getTask() const {
-            return task_;
+        const std::string gettitle() const {
+            return title_;
         }
         const bool getIsDone () const {
             return isDone_;
@@ -29,7 +29,7 @@ class Todo {
         }
 
     private:
-        std::string task_;
+        std::string title_;
         bool isDone_;
 };
 
@@ -39,7 +39,7 @@ EMSCRIPTEN_BINDINGS(todo) {
         .function("done", &Todo::done)
         .function("unDone", &Todo::unDone)
         .function("toggle", &Todo::toggle)
-        .property("task", &Todo::getTask)
+        .property("title", &Todo::gettitle)
         .property("isDone", &Todo::getIsDone)
         ;
 }
