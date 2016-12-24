@@ -5,6 +5,7 @@
   "author": "Edward Fox <edwardkenfox@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "build": "npm run build:app && npm run build:domain",
     "build:app": "webpack --config ./config/webpack.config.js",
     "build:app:watch": "webpack --config ./config/webpack.config.js --watch",
     "build:domain": "./build.sh"
