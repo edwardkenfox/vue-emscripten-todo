@@ -11,7 +11,7 @@ class Todo {
             : title_(std::forward<std::string>(title)), isDone_(false)
         {}
 
-        const std::string gettitle() const {
+        const std::string getTitle() const {
             return title_;
         }
         const bool getIsDone () const {
@@ -39,7 +39,7 @@ EMSCRIPTEN_BINDINGS(todo) {
         .function("done", &Todo::done)
         .function("unDone", &Todo::unDone)
         .function("toggle", &Todo::toggle)
-        .property("title", &Todo::gettitle)
+        .property("title", &Todo::getTitle)
         .property("isDone", &Todo::getIsDone)
         ;
 }
