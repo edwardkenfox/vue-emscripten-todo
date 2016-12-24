@@ -5,7 +5,8 @@
   "author": "Edward Fox <edwardkenfox@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --config ./config/webpack.config.js"
+    "build:main": "webpack --config ./config/webpack.config.js",
+    "build:models": "./build.sh"
   },
   "dependencies": {
     "vue": "^2.1.6"
