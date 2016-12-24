@@ -7,26 +7,26 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      todo: {
-        type: Object,
-        required: true,
-      },
-      remove: {
-        type: Function,
-        required: true,
-      },
-      index: {
-        type: Number,
-        required: true,
-      }
+export default {
+  props: {
+    todo: {
+      type: Object,
+      required: true,
     },
+    remove: {
+      type: Function,
+      required: true,
+    },
+    index: {
+      type: Number,
+      required: true,
+    }
+  },
 
-    methods: {
-      toggle: function() {
-        this.todo.toggle();
-      }
+  methods: {
+    toggle: function() {
+      this.todo.toggle();
     }
   }
+}
 </script>
