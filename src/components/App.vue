@@ -33,6 +33,7 @@ export default {
     },
 
     removeTodo: function(index) {
+      this.todos[index].delete();
       this.todos.splice(index, 1);
     }
   },
